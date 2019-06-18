@@ -7,8 +7,8 @@ var margin = { top: 30, right: 30, bottom: 50, left: 30, pad: 10 }
 var width = 900 - margin.left - margin.right;
 var height = 900 - margin.top - margin.bottom;
 
-// SVG element for rainbow
-var svgContainer = d3.select(".rainbow").append("svg")
+// SVG element for aura
+var svgContainer = d3.select(".aura").append("svg")
     .attr("width", width)
     .attr("height", height)
     .append("g")
