@@ -3,9 +3,8 @@ var colors = [ "Red", "Orange", "Yellow", "Green",
     "Blue", "Violet" ];
 
 // Configuration
-var margin = { top: 30, right: 30, bottom: 50, left: 30, pad: 10 }
-var width = 900 - margin.left - margin.right;
-var height = 900 - margin.top - margin.bottom;
+var width = 900;
+var height = 900;
 
 // SVG element for aura
 var svgContainer = d3.select(".aura").append("svg")
@@ -21,10 +20,10 @@ console.log(scores);
 //Define arcs
 var arc = d3.arc()
     .innerRadius(function(d, i) {
-        return 450 - 50 * i + scores[i]/2.5
+        return width/2 - width/15 * i + scores[i]/2.5
     })
     .outerRadius(function(d, i) {
-        return 350 - 50 * i - scores[i]/2.5
+        return width/3 - width/20 * i - scores[i]/2.5
     })
     .startAngle(function(d, i) {
         return -Math.PI / 1.2 + .08 * i
